@@ -1,9 +1,10 @@
-import React from 'react';
+
 import useContext from '../../hooks/useContext';
 import Card from './Card';
 
 const Cards = () => {
     const [data]=useContext();
+    
     // console.log(data);
     return (
         <section>

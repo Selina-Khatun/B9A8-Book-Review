@@ -12,15 +12,22 @@ import ListedBooks from './pages/ListedBooks/ListedBooks.jsx';
 import PagesToRead from './pages/PagesToRead/PagesToRead.jsx';
 import Services from './pages/Services/Services.jsx';
 import About from './pages/About/About.jsx';
+import CardDetails from './components/CardDetails/CardDetails.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    errorElement:<ErrorPage></ErrorPage>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/cards/:id",
+        element: <CardDetails></CardDetails>,
+        loader:()=>fetch("/data.json")
+
       },
       {
         path: "/listedBooks",
@@ -45,6 +52,6 @@ const router = createBrowserRouter([
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-   <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )
