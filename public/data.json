@@ -1,0 +1,79 @@
+[
+    {
+      "bookId": 1,
+      "bookName": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "image": "https://i.ibb.co/Qj9NMMx/download-removebg-preview.png",
+      "review": "To Kill a Mockingbird is a timeless masterpiece that delves into the depths of racial injustice and moral growth in the American South. Set in the fictional town of Maycomb, Alabama, during the Great Depression, the novel follows the experiences of Scout Finch, her brother Jem, and their father Atticus Finch, a lawyer defending a black man falsely accused of raping a white woman. Through Scout's innocent perspective, readers are confronted with the harsh realities of prejudice and discrimination prevalent in the Southern United States. Harper Lee's poignant storytelling and unforgettable characters make this novel a classic that continues to resonate with readers of all ages.",
+      "totalPages": 281,
+      "rating": 4.5,
+      "category": "Fiction",
+      "tags": ["Classic", "Literary Fiction"],
+      "publisher": "J. B. Lippincott & Co.",
+      "yearOfPublishing": 1960
+    },
+    {
+      "bookId": 2,
+      "bookName": "1984",
+      "author": "George Orwell",
+      "image": "https://i.ibb.co/Krw4D2f/download-2.jpg",
+      "review": "1984 is a dystopian masterpiece that serves as a stark warning against the dangers of totalitarianism and the erosion of individual freedom. Set in a totalitarian society where the government, led by the oppressive Party, monitors and controls every aspect of people's lives, the novel follows Winston Smith, a disillusioned citizen who rebels against the regime's tyrannical rule. Through Winston's struggles, George Orwell paints a chilling portrait of a society where truth is distorted, history is rewritten, and dissent is brutally suppressed. Orwell's prophetic vision of surveillance, propaganda, and thought control remains hauntingly relevant in today's world, making 1984 essential reading for anyone concerned about the preservation of democratic values and individual liberties.",
+      "totalPages": 328,
+      "rating": 4.8,
+      "category": "Science Fiction",
+      "tags": ["Dystopian", "Political Fiction"],
+      "publisher": "Secker & Warburg",
+      "yearOfPublishing": 1949
+    },
+    {
+      "bookId": 3,
+      "bookName": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "image": "https://i.ibb.co/XpDtgpt/images.jpg",
+      "review": "The Great Gatsby is a brilliant portrayal of the Jazz Age and the American Dream, capturing the essence of an era marked by excess and disillusionment. Set in the 1920s, the novel follows the mysterious millionaire Jay Gatsby and his obsession with the beautiful Daisy Buchanan. Through Gatsby's lavish parties and doomed love affair, F. Scott Fitzgerald explores the complexities of wealth, class, and social status in post-war America. With its lyrical prose and vivid imagery, The Great Gatsby transports readers to a world of glamour and decadence, where the pursuit of the American Dream often leads to tragedy and despair.",
+      "totalPages": 180,
+      "rating": 4.3,
+      "category": "Fiction",
+      "tags": ["Classic", "Literary Fiction"],
+      "publisher": "Charles Scribner's Sons",
+      "yearOfPublishing": 1925
+    },
+    {
+      "bookId": 4,
+      "bookName": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "image": "https://i.ibb.co/7rmJ8Bb/images-4.jpg",
+      "review": "Pride and Prejudice is a timeless classic that continues to enchant readers with its charming tale of love, manners, and social class in early 19th-century England. Set against the backdrop of the English countryside, the novel follows the spirited Elizabeth Bennet and the enigmatic Mr. Darcy as they navigate the intricacies of courtship and marriage. Through witty dialogue and astute social commentary, Jane Austen explores themes of love, marriage, and the role of women in society. With its memorable characters and enduring romance, Pride and Prejudice remains a beloved favorite that captivates readers of all ages.",
+      "totalPages": 279,
+      "rating": 4.6,
+      "category": "Fiction",
+      "tags": ["Romance", "Classic"],
+      "publisher": "T. Egerton, Whitehall",
+      "yearOfPublishing": 1813
+    },
+    {
+      "bookId": 5,
+      "bookName": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "image": "https://i.ibb.co/thSrm0n/download-1.jpg",
+      "review": "The Catcher in the Rye is a seminal coming-of-age novel that captures the disillusionment and alienation of adolescence with raw honesty and insight. Narrated by the cynical and rebellious teenager Holden Caulfield, the novel follows his journey through New York City after being expelled from prep school. As Holden grapples with feelings of isolation and confusion, J.D. Salinger provides a poignant exploration of identity, authenticity, and the search for meaning in an increasingly superficial world. With its rebellious protagonist and provocative themes, The Catcher in the Rye remains a powerful and influential work of literature that continues to resonate with readers.",
+      "totalPages": 224,
+      "rating": 4.4,
+      "category": "Fiction",
+      "tags": ["Coming-of-age", "Literary Fiction"],
+      "publisher": "Little, Brown and Company",
+      "yearOfPublishing": 1951
+    },{
+        "bookId": 6,
+        "bookName": "Harry Potter and the Sorcerer's Stone",
+        "author": "J.K. Rowling",
+        "image": "https://i.ibb.co/hYY0CDc/images-3.jpg",
+        "review": "Harry Potter and the Sorcerer's Stone marks the magical beginning of one of the most beloved fantasy series of all time. In this enchanting tale, readers are introduced to Harry Potter, a young boy who discovers that he is a wizard on his eleventh birthday. As Harry embarks on his journey to Hogwarts School of Witchcraft and Wizardry, he encounters a world filled with wonder, danger, and adventure. J.K. Rowling's imaginative storytelling and vivid characters captivate readers from the very first page, transporting them to a realm where magic is real and anything is possible. From the moment Harry steps onto the platform at Platform 9¾ to his epic showdown with the dark wizard Voldemort, readers are swept away on an unforgettable journey filled with friendship, courage, and the power of love. With its timeless themes of bravery, loyalty, and the triumph of good over evil, Harry Potter and the Sorcerer's Stone continues to inspire readers of all ages, reminding us of the magic that lies within each of us.",
+        "totalPages": 309,
+        "rating": 4.9,
+        "category": "Fantasy",
+        "tags": ["Wizardry", "Magic"],
+        "publisher": "Bloomsbury",
+        "yearOfPublishing": 1997
+      }
+    ]

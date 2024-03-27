@@ -1,18 +1,31 @@
 import { NavLink } from "react-router-dom";
+import'./Navbar.css';
+
 
 const Navbar = () => {
     const navItems = <>
-        <li className='mr-3 text-base' ><NavLink to={'/'}>Home</NavLink></li>
-        <li className='mr-3 text-base'><NavLink to={'/listedBooks'}>Listed Books</NavLink></li>
-        <li className='mr-3 text-base'><NavLink to={'/pagesToRead'}>Pages to Read</NavLink></li>
-        <li className='mr-3 text-base'><NavLink to={'/services'}>Services</NavLink></li>
-        <li className='mr-3 text-base'><NavLink to={'/about'}>About</NavLink></li>
-      
-        
+        <li className='mr-3 text-base '  ><NavLink  
+        className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? " text-[#23BE0A] border-2  border-green-400 underline" : ""
+        } to={'/'}>Home</NavLink></li>
+        <li className='mr-3 text-base '><NavLink className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? " text-[#23BE0A] border-2  border-green-400 underline" : ""
+        } to={'/listedBooks'}>Listed Books</NavLink></li>
+        <li className='mr-3 text-base'><NavLink className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? " text-[#23BE0A] border-2  border-green-400 underline" : ""
+        } to={'/pagesToRead'}>Pages to Read</NavLink></li>
+        <li className='mr-3 text-base'><NavLink className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? " text-[#23BE0A] border-2  border-green-400 underline" : ""
+        } to={'/services'}>Services</NavLink></li>
+        <li className='mr-3 text-base'><NavLink className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? " text-[#23BE0A] border-2  border-green-400 underline" : ""
+        } to={'/about'}>About</NavLink></li>
+
+
 
     </>
     return (
-        <div className="navbar bg-base-100">
+        <nav   className="navbar bg-base-100">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -30,7 +43,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-              
+
                 <button className="relative rounded mr-2 px-5 py-2.5 overflow-hidden group bg-[#23BE0A]  hover:bg-gradient-to-r hover:from-green-800 hover:to-green-500 text-white hover:ring-2 hover:ring-offset-2 hover:ring-green-400 transition-all ease-out duration-300">
                     <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
                     <span className="relative">Sign In</span>
@@ -40,7 +53,7 @@ const Navbar = () => {
                     <span className="relative">Sign Up</span>
                 </button>
             </div>
-        </div>
+        </nav>
     );
 };
 
