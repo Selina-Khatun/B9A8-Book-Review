@@ -2,7 +2,7 @@ import { FaRegStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Card = ({ card }) => {
-  console.log(card);
+  // console.log(card);
   const {bookId, image, tags, bookName, author, category, rating } = card || {};
   return (
     <div className="card m-3 border">

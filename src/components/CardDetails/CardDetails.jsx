@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
-
+import swal from 'sweetalert';
 
 const CardDetails = () => {
     const [card, setCard] = useState({})
+
     const { id } = useParams();
     const cards = useLoaderData();
     // console.log('id', id); 
@@ -17,6 +18,47 @@ const CardDetails = () => {
             setCard(findCard);
         }
     }, [id, cards]);
+const handleAddRead=()=>{
+    if(!card) return;
+    const addedReadArray=[];
+    const readItems=JSON.parse(localStorage.getItem('reads'));
+    if (!readItems) {
+        addedReadArray.push(card);
+                localStorage.setItem('reads', JSON.stringify(addedReadArray))
+                swal("Good job!", "You have successfully donated ", "success");
+            } else {
+    
+                const isExist = readItems.find((card) => card.bookId === parseInt(id));
+                if (!isExist) {
+                    addedReadArray.push(...readItems, card);
+                    localStorage.setItem('reads', JSON.stringify(addedReadArray))
+                    swal({
+                        title: "Good job!",
+                        text: "You read the book!",
+                        icon: "success",
+                        button: "Aww yiss!",
+                      });
+                } else {
+                    swal("opps!", "already exixted!");
+                }
+    
+            }
+
+}
+
+const handleAddWish = (id, card) => {
+    const wishItems = JSON.parse(localStorage.getItem('wishes')) || [];
+    
+    const isExist = wishItems.some((item) => item.bookId === parseInt(id));
+    
+    if (!isExist) {
+        wishItems.push(card);
+        localStorage.setItem('wishes', JSON.stringify(wishItems));
+        swal("Good job!", "You have successfully added book to your wishlist", "success");
+    } else {
+        swal("Ops!", "This book is already in your wishlist!", "warning");
+    }
+};
     return (
         <section>
 
@@ -59,7 +101,7 @@ const CardDetails = () => {
                                     <p>{card.rating}</p>
                                 </div>
                             </div>
-                            <button className="relative px-9 py-3 overflow-hidden font-medium text-gray-600 bg-gray-100 border border-gray-300 rounded-lg shadow-inner group">
+                            <button onClick={()=>handleAddRead(id)} className="relative px-9 py-3 overflow-hidden font-medium text-gray-600 bg-gray-100 border border-gray-300 rounded-lg shadow-inner group">
                                 <span className="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease"></span>
                                 <span className="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-gray-600 group-hover:w-full ease"></span>
                                 <span className="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"></span>
@@ -67,7 +109,7 @@ const CardDetails = () => {
                                 <span className="absolute inset-0 w-full h-full duration-300 delay-300 bg-gray-900 opacity-0 group-hover:opacity-100"></span>
                                 <span className="relative transition-colors duration-300 delay-200 group-hover:text-white ease">Read</span>
                             </button>
-                            <button className="relative rounded px-5 ml-4 py-2.5 overflow-hidden group bg-[#59C6D2]  hover:bg-gradient-to-r hover:from-[#0dabbc] hover:to-[#22676e] text-white hover:ring-2 hover:ring-offset-2 hover:ring-[#59C6D2] transition-all ease-out duration-300">
+                            <button onClick={() => handleAddWish(id, card)} className="relative rounded px-5 ml-4 py-2.5 overflow-hidden group bg-[#59C6D2]  hover:bg-gradient-to-r hover:from-[#0dabbc] hover:to-[#22676e] text-white hover:ring-2 hover:ring-offset-2 hover:ring-[#59C6D2] transition-all ease-out duration-300">
                                 <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
                                 <span className="relative">Wishlist</span>
                             </button>
