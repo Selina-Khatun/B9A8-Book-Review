@@ -1,7 +1,7 @@
 
 const Banner = () => {
     return (
-        <div className="hero rounded-3xl my-5 max-w-7xl bg-base-200">
+        <div className="hero  rounded-3xl my-5 max-w-7xl bg-base-200">
             <div className="hero-content   flex-col lg:flex-row-reverse">
                 <div className="">
                     <img src="https://i.ibb.co/kygGW7k/pngwing-1.png" className=" rounded-lg" />

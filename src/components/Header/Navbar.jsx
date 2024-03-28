@@ -1,31 +1,26 @@
 import { NavLink } from "react-router-dom";
-import'./Navbar.css';
+import './Navbar.css';
 
 
 const Navbar = () => {
     const navItems = <>
-        <li className='mr-3 text-base '  ><NavLink  
-        className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? " text-[#23BE0A] border-2  border-green-400 underline" : ""
-        } to={'/'}>Home</NavLink></li>
-        <li className='mr-3 text-base '><NavLink className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? " text-[#23BE0A] border-2  border-green-400 underline" : ""
-        } to={'/listedBooks'}>Listed Books</NavLink></li>
-        <li className='mr-3 text-base'><NavLink className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? " text-[#23BE0A] border-2  border-green-400 underline" : ""
-        } to={'/pagesToRead'}>Pages to Read</NavLink></li>
-        <li className='mr-3 text-base'><NavLink className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? " text-[#23BE0A] border-2  border-green-400 underline" : ""
-        } to={'/services'}>Services</NavLink></li>
-        <li className='mr-3 text-base'><NavLink className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? " text-[#23BE0A] border-2  border-green-400 underline" : ""
-        } to={'/about'}>About</NavLink></li>
+        <li className='mr-3 text-base ' ><NavLink
+            className={({ isActive }) =>
+                isActive ? " text-[#23BE0A] border-2  border-green-400 underline" : "font-semibold"
+            } to={'/'}>Home</NavLink></li>
+        <li className='mr-3 text-base '><NavLink className={({ isActive }) =>
+            isActive ? " text-[#23BE0A] border-2  border-green-400 underline" : "font-semibold"} to={'/listedBooks'}>Listed Books</NavLink></li>
+        <li className='mr-3 text-base'><NavLink className={({ isActive }) =>
+            isActive ? " text-[#23BE0A] border-2  border-green-400 underline" : "font-semibold"} to={'/pagesToRead'}>Pages to Read</NavLink></li>
+        <li className='mr-3 text-base'><NavLink className={({ isActive }) =>
+            isActive ? " text-[#23BE0A] border-2  border-green-400 underline" : "font-semibold"} to={'/services'}>Services</NavLink></li>
+        <li className='mr-3 text-base'><NavLink className={({ isActive }) => isActive ? " text-[#23BE0A] border-2  border-green-400 underline" : "font-semibold"} to={'/about'}>About</NavLink></li>
 
 
 
     </>
     return (
-        <nav   className="navbar bg-base-100">
+        <nav className="navbar bg-base-100 sticky top-0 z-50">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
