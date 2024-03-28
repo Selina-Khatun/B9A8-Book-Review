@@ -25,7 +25,7 @@ const handleAddRead=()=>{
     if (!readItems) {
         addedReadArray.push(card);
                 localStorage.setItem('reads', JSON.stringify(addedReadArray))
-                swal("Good job!", "You have successfully donated ", "success");
+                swal("Good job!", "You have successfully read the book ", "success");
             } else {
     
                 const isExist = readItems.find((card) => card.bookId === parseInt(id));
@@ -47,8 +47,14 @@ const handleAddRead=()=>{
 }
 
 const handleAddWish = (id, card) => {
+    const readItems = JSON.parse(localStorage.getItem('reads')) || [];
     const wishItems = JSON.parse(localStorage.getItem('wishes')) || [];
-    
+    const isRead = readItems.some((item) => item.bookId === parseInt(id));
+    if (isRead) {
+        swal("Oops!", "This book is already read. You cannot add it to the wishlist.", "warning");
+        return; 
+    }
+
     const isExist = wishItems.some((item) => item.bookId === parseInt(id));
     
     if (!isExist) {
@@ -59,6 +65,7 @@ const handleAddWish = (id, card) => {
         swal("Ops!", "This book is already in your wishlist!", "warning");
     }
 };
+
     return (
         <section>
 
